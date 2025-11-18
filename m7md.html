@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمد وجيه - الأمن السبراني</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #000000;
+            --secondary: #1a1a1a;
+            --accent: #00d4ff;
+            --text: #ffffff;
+            --text-secondary: #b0b0b0;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, var(--accent), #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ffffff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, var(--accent), #0099cc);
+            color: var(--primary);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, var(--accent), #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* About */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        /* Hobbies */
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .hobby-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .hobby-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .hobby-card h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        /* Achievements */
+        .achievements-list {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .achievement-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border-right: 4px solid var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">MW</div>
+                <div class="nav-links">
+                    <a href="#home">الرئيسية</a>
+                    <a href="#about">عنّي</a>
+                    <a href="#hobbies">الهوايات</a>
+                    <a href="#achievements">الإنجازات</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>محمد وجيه</h1>
+                <p>متخصص في الأمن السبراني | عمر 15 سنة | شغوف بالتكنولوجيا والأمن المعلوماتي</p>
+                <a href="#about" class="cta-button">اكتشف المزيد</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">عنّي</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        أنا محمد وجيه، طالب شغوف بمجال الأمن السبراني والتكنولوجيا. 
+                        عمري 15 سنة وأسعى دائماً لتطوير مهاراتي في مجال الأمن المعلوماتي 
+                        وحماية الأنظمة من الاختراقات.
+                    </p>
+                    <br>
+                    <p>
+                        أؤمن بأهمية الأمن السبراني في عصر التكنولوجيا الحالي، وأعمل على 
+                        تعلم أحدث التقنيات والأساليب لحماية البيانات والأنظمة.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>العمر</h3>
+                        <p>15 سنة</p>
+                    </div>
+                    <div class="stat">
+                        <h3>التخصص</h3>
+                        <p>الأمن السبراني</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies">
+        <div class="container">
+            <h2 class="section-title">هواياتي</h2>
+            <div class="hobbies-grid">
+                <div class="hobby-card">
+                    <h3>🎮 قيمق</h3>
+                    <p>شغوف بألعاب الفيديو وخاصة ألعاب الاستراتيجية والأكشن</p>
+                </div>
+                <div class="hobby-card">
+                    <h3>💻 البرمجة</h3>
+                    <p>تطوير مهارات في البرمجة والأمن السبراني</p>
+                </div>
+                <div class="hobby-card">
+                    <h3>🔒 الأمن السبراني</h3>
+                    <p>دراسة تقنيات الحماية والاختراق الأخلاقي</p>
+                </div>
+                <div class="hobby-card">
+                    <h3>🌐 التكنولوجيا</h3>
+                    <p>متابعة أحدث التقنيات والابتكارات في العالم الرقمي</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <div class="container">
+            <h2 class="section-title">إنجازاتي</h2>
+            <div class="achievements-list">
+                <div class="achievement-item">
+                    <h3>التخصص في الأمن السبراني</h3>
+                    <p>بداية رحلة في مجال الأمن المعلوماتي في سن مبكر</p>
+                </div>
+                <div class="achievement-item">
+                    <h3>تطوير المهارات التقنية</h3>
+                    <p>اكتساب مهارات متقدمة في مجال التكنولوجيا والبرمجة</p>
+                </div>
+                <div class="achievement-item">
+                    <h3>بناء مواقع ويب</h3>
+                    <p>تصميم وتطوير مواقع ويب احترافية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 محمد وجيه - جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(0, 0, 0, 0.95)';
+            } else {
+                header.style.background = 'rgba(0, 0, 0, 0.9)';
+            }
+        });
+    </script>
+</body>
+</html>
